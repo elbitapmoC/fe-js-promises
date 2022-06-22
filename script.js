@@ -1,63 +1,26 @@
-const scrollable = document.getElementById('scrollable');
-const button = document.querySelector('button');
+// CALLBACK EX -START
+// const userLeft = false;
+// const userWatchingCatMeme = true;
 
-// const abort = new AbortController();
-// button.addEventListener('click', onClick, {
-//     capture: true,
-//     once: true,
-//     passive: true,
-//     signal: abort.signal
-// });
-// abort.abort(); //removes event listener
-
-// (event, function, useCapture)
-// function onClick(e){
-//     // e.preventDefault();
-//     // e.stopPropagation();
-//     console.log(e.target);
-//     console.log(this);
+// function watchCallbackTut(callback, errCallback){
+//   if(userLeft) {
+//     errCallback({
+//       name: "User's MIA",
+//       message: ':[',
+//     })
+//   } else if(userWatchingCatMeme) {
+//     errCallback({
+//       name: 'User Watching Cat Videos..',
+//       message: '\nWebdev Simplified < Cats'
+//     })
+//   } else {
+//     callback('Thumbs up & Sub!')
+//   }
 // }
 
-// EVENTS
-// dblclick
-// mousedown
-// mouseup
-// keydown
-// keyup
-
-// Scrolling
-// mousemove
-// mouseenter
-
-// scrollable.addEventListener('scroll', e => {
-//     console.log(e.target.scrollTop);
+// watchCallbackTut(message =>{
+//   console.log(`Success: ${message}`);
+// }, err => {
+//   console.log(`${err.name} ${err.message}`);
 // })
-
-// scrollable.addEventListener('mouseenter', e => {
-//     console.log(e.pageX, e.pageY);
-// })
-
-// scrollable.addEventListener('mousemove', e => {
-//     console.log(e.pageX, e.pageY);
-// })
-
-// button.addEventListener('dragstart', e =>{
-//     console.log(e);
-// })
-
-// scrollable.addEventListener('drop', e =>{
-//     scrollable.prepend(button)
-// })
-
-// scrollable.addEventListener('dragover',e=>{
-//     // prevent default behavior because it prevents us from using drop.
-//     e.preventDefault();
-
-//     console.log('SAFE ZONE, PREP FOR LANDING');
-// })
-
-scrollable.addEventListener('click', event =>{
-    // if(event.target.tagName === 'P'){
-    //     event.target.textContent = 'Clicked!';
-    // }
-});
+// CALLBACK EX -END
