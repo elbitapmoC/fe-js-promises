@@ -24,3 +24,21 @@
 //   console.log(`${err.name} ${err.message}`);
 // })
 // CALLBACK EX -END
+
+
+// BASIC - START
+// let p = new Promise((resolve, reject) => {
+//     let a = 1+3;
+//     if(a === 2){
+//         resolve('Yatah!');
+//     } else {
+//         reject('Failed');
+//     }
+// })
+
+// p.then(message => {
+//     console.log(`Success: ${message}`);
+// }).catch(message => {
+//     console.log(`ERRRR: ${message}`);
+// })
+// BASIC - END
