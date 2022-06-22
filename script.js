@@ -15,10 +15,10 @@
 // })
 // BASIC - END
 
-// CALLBACK EX -START
-// const userLeft = false;
-// const userWatchingCatMeme = true;
+const userLeft = false;
+const userWatchingCatMeme = false;
 
+// CALLBACK EX -START
 // function watchCallbackTut(callback, errCallback){
 //   if(userLeft) {
 //     errCallback({
@@ -41,3 +41,29 @@
 //   console.log(`${err.name} ${err.message}`);
 // })
 // CALLBACK EX -END
+
+// sub promise for callback - START
+function watchPromiseTut(){
+  return new Promise((resolve, reject)=>{
+    if(userLeft) {
+      reject({
+        message: "User's MIA\n:[",
+      })
+    } else if(userWatchingCatMeme) {
+      reject({
+        message: 'User Watching Cat Videos..\nWebdev Simplified < Cats'
+      })
+    } else { 
+      resolve('Thumbs up & Sub!')
+    }
+  });
+}
+
+watchPromiseTut().then(msg => {
+  console.log(msg);
+}).catch(err =>{
+  if(typeof err === 'object'){
+    console.log(err.message);
+  } 
+})
+// sub promise for callback - END
