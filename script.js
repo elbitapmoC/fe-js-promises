@@ -43,27 +43,45 @@ const userWatchingCatMeme = false;
 // CALLBACK EX -END
 
 // sub promise for callback - START
-function watchPromiseTut(){
-  return new Promise((resolve, reject)=>{
-    if(userLeft) {
-      reject({
-        message: "User's MIA\n:[",
-      })
-    } else if(userWatchingCatMeme) {
-      reject({
-        message: 'User Watching Cat Videos..\nWebdev Simplified < Cats'
-      })
-    } else { 
-      resolve('Thumbs up & Sub!')
-    }
-  });
-}
+// function watchPromiseTut(){
+//   return new Promise((resolve, reject)=>{
+//     if(userLeft) {
+//       reject({
+//         message: "User's MIA\n:[",
+//       })
+//     } else if(userWatchingCatMeme) {
+//       reject({
+//         message: 'User Watching Cat Videos..\nWebdev Simplified < Cats'
+//       })
+//     } else { 
+//       resolve('Thumbs up & Sub!')
+//     }
+//   });
+// }
 
-watchPromiseTut().then(msg => {
-  console.log(msg);
-}).catch(err =>{
-  if(typeof err === 'object'){
-    console.log(err.message);
-  } 
-})
+// watchPromiseTut().then(msg => {
+//   console.log(msg);
+// }).catch(err =>{
+//   if(typeof err === 'object'){
+//     console.log(err.message);
+//   } 
+// })
 // sub promise for callback - END
+
+const recordSongOne = new Promise((resolve, reject)=>{
+  resolve('Masterpiece Recorded');
+})
+
+const recordSongTwo = new Promise((resolve, reject)=>{
+  resolve('Masterpiece Recorded');
+})
+
+const recordSongThree = new Promise((resolve, reject)=>{
+  resolve('Masterpiece Recorded');
+})
+
+Promise.all([recordSongOne,recordSongTwo,recordSongThree]).then(resolve =>{
+  console.log(resolve);
+}).catch(err =>{
+  console.log(err);
+})
